@@ -1,9 +1,12 @@
 \usepackage{ % Multilingual support
   fontspec, % Custom fonts
   xunicode, % Unicode support in XeLaTeX. If you encounter problems while typesetting, clear the font cache in TexLive folder.
+  xltxtra, % Miscellaneous
+  xeCJK, % CJK charset support
   etoolbox} % Magic patches to commands
 \usepackage{ % Other packages
   graphicx, % Support the \includegraphics command and options
+  verbatim, % Adds environment for commenting out blocks of text & for better verbatim
   listings} % Adds environment for code linting and blocks
 
 % Ignore oversize errors
@@ -11,6 +14,7 @@
 \hbadness = 500000
 \vbadness = 500000
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Several tweaks
 \ProcessOptionsBeamer % Beamer styles
@@ -82,6 +86,8 @@
 \setbeamercolor{subsection in sidebar shaded}{
   fg = grey}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Creating a new frame context
 \newenvironment{lpqframe}
 { % begin of context init
@@ -110,3 +116,12 @@
 } % end of context init
 { % begin of context term
 } % end of context term
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Creating easy-to-use line breaks
+\newcommand\n{\medskip}
+
+% Making greater and less-than signs, in compatibility with Markdown
+\newcommand\gt{>}
+\newcommand\lt{<}
