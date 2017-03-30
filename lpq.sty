@@ -92,3 +92,21 @@
 { % begin of context term
   \end{frame}%
 } % end of context term
+
+% Creating a header / footer system
+\newenvironment{lpqcontext}
+{ % begin of context init
+  % Title page
+  \begin{frame}
+    \bigskip
+    \titlepage
+  \end{frame}
+  % Table of Contents
+  \section*{Table of Contents}
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents
+  \end{frame}
+} % end of context init
+{ % begin of context term
+} % end of context term
