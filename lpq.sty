@@ -25,6 +25,13 @@
 \usecolortheme{whale}
 \usecolortheme{orchid}
 
+% Patching miniframe titles for dots to appear on the sides of the subsection titles instead of below
+% Patch comes from http://tex.stackexchange.com/questions/88182/beamer-miniframes-side-by-side-section-names-and-navigation-dots
+\makeatletter
+\patchcmd{\slideentry}{\advance\beamer@tempdim by -.05cm}{\advance\beamer@tempdim by\beamer@vboxoffset\advance\beamer@tempdim by\beamer@boxsize\advance\beamer@tempdim by 1.2\pgflinewidth}{}{}
+\patchcmd{\slideentry}{\kern\beamer@tempdim}{\advance\beamer@tempdim by 2pt\advance\beamer@tempdim by\wd\beamer@sectionbox\kern\beamer@tempdim}{}{}
+\makeatother
+
 % Defining colours
 \xdefinecolor{basecolour}{rgb} % Default colour, this can be changed
   {0.455, 0.204, 0.506} % THU purple
