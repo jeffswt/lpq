@@ -81,3 +81,14 @@
   fg = brown}
 \setbeamercolor{subsection in sidebar shaded}{
   fg = grey}
+
+% Creating a new frame context
+\newenvironment{lpqframe}
+{ % begin of context init
+  \begin{frame}[
+    allowframebreaks]%
+  \frametitle{\secname\ |\ \subsecname\ }%
+} % end of context init
+{ % begin of context term
+  \end{frame}%
+} % end of context term
