@@ -11,3 +11,66 @@
 \hbadness = 500000
 \vbadness = 500000
 
+
+% Several tweaks
+\ProcessOptionsBeamer % Beamer styles
+\setbeamertemplate{navigation symbols}{} % Disable navigation symbols
+
+% Setting base styles for further modifications
+\useoutertheme[
+  footline = authorinstitutetitle, % Author, Institute and Title
+  subsection = false] % Do not show lower level tiles
+  {miniframes} % The likely navigation bars
+\useinnertheme{rectangles}
+\usecolortheme{whale}
+\usecolortheme{orchid}
+
+% Defining colours
+\xdefinecolor{basecolour}{rgb} % Default colour, this can be changed
+  {0.455, 0.204, 0.506} % THU purple
+\setbeamercolor{frametitle}{ % Frame title colour
+  fg = white, % Foreground colour
+  bg = basecolour} % Background colour
+\setbeamercolor{title}{
+  fg = white, % Foreground colour
+  bg = basecolour} % Background colour
+\setbeamerfont{frametitle}{
+  size = \large} % Default frame title font size
+\setbeamercolor{block title}{
+  bg = basecolour}
+\setbeamercolor{block title example}{
+  use = {
+    normal text,
+    example text},
+  fg = example text.fg!75!normal text.fg,
+  bg = basecolour text.bg!75!black}
+\setbeamercolor{fine separation line}{}
+\setbeamercolor{item projected}{
+  fg = black}
+\setbeamercolor{palette sidebar primary}{
+  use = normal text,
+  fg = normal text.fg}
+\setbeamercolor{palette sidebar quaternary}{
+  use = structure,
+  fg = structure.fg}
+\setbeamercolor{palette sidebar secondary}{
+  use = structure,
+  fg = structure.fg}
+\setbeamercolor{palette sidebar tertiary}{
+  use = normal text,
+  fg = normal text.fg}
+\setbeamercolor{section in sidebar}{
+  fg = brown}
+\setbeamercolor{section in sidebar shaded}{
+  fg = grey}
+\setbeamercolor{separation line}{}
+\setbeamercolor{sidebar}{
+  bg = basecolour}
+\setbeamercolor{sidebar}{
+  parent = palette primary}
+\setbeamercolor{structure}{
+  fg = basecolour}
+\setbeamercolor{subsection in sidebar}{
+  fg = brown}
+\setbeamercolor{subsection in sidebar shaded}{
+  fg = grey}
